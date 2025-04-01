@@ -4,7 +4,7 @@ import DumpScreen from './components/dump';
 import LandingScreen from './components/landing';
 import MakeCollageScreen from './components/collage';
 
-const ReflectAndBloomApp = () => {
+const App = () => {
     const [currentScreen, setCurrentScreen] = useState<'landing' | 'dump' | 'collage'>('landing');
     const [posts, setPosts] = useState<{ image: string; story: string }[]>([]);
 
@@ -52,5 +52,5 @@ const ReflectAndBloomApp = () => {
     );
 };
 
-export default ReflectAndBloomApp;
+export default App;
 

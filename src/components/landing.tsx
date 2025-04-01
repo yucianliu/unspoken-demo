@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Upload, Palette } from 'lucide-react';
-import { Button } from './ui/button'; // Import Button
+import { Button } from './ui/button';
 
 interface LandingScreenProps {
     key?: string;  // Add key to props
