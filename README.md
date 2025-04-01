@@ -1,2 +1,2 @@
-# unspoken-demo
-Anonymous, image-based social media app that runs on react
+# Unspoken
+Unspoken is an anonymous, image-based social media app that runs on react.
