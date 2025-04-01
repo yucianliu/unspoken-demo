@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Upload, Palette } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
+import type { CSSProperties } from 'react';
 
 interface LandingScreenProps {
     key?: string;  // Add key to props
@@ -12,7 +13,7 @@ const LandingScreen: React.FC<LandingScreenProps> = ({ onNavigate }) => {
     const [images, setImages] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const intervalRef = useRef<number>();
+    const intervalRef = useRef<number | null>(null);
     const [dimensions, setDimensions] = useState<{ width: number; height: number }[]>([]);
 
       useEffect(() => {
@@ -63,10 +64,10 @@ const LandingScreen: React.FC<LandingScreenProps> = ({ onNavigate }) => {
         };
     }, [isLoading, images.length, images]);
 
-    const getGridStyle = (index: number) => {
+    const getGridStyle = (index: number): CSSProperties => {
         const numImages = images.length;
-        const cols = 2; // Number of columns
-        const gap = 15; // Increased gap for less overlap
+        const cols = 2;
+        const gap = 15;
 
         let row = Math.floor(index / cols);
         let col = index % cols;
@@ -74,23 +75,25 @@ const LandingScreen: React.FC<LandingScreenProps> = ({ onNavigate }) => {
         let height = 200;
 
         if (dimensions[index]) {
-            width = `${(dimensions[index].width / 400) * 100}%`;
-            height = (dimensions[index].height / dimensions[index].width) * 400; // Adjusted height calculation
+            const imgWidth = dimensions[index].width || 400;
+            width = `${(imgWidth / 400) * 100}%`;
+            height = (dimensions[index].height / imgWidth) * 400;
         }
 
         const x = `calc(${(100 / cols) * col}% + ${col * gap}px)`;
-        const y = `${row * (height + gap)}px`; // Use height here
+        const y = `${row * (height + gap)}px`;
 
-        const style = {
+        const style: CSSProperties = {
             position: 'absolute',
             left: x,
             top: y,
-            width: `calc(${width} - ${2 * gap}px)`,
-            height: `calc(${height}px - ${2 * gap}px)`, // Use height here
+            width: `calc(${width} - ${gap}px)`,
+            height: `${height}px`,
             zIndex: numImages - Math.abs(index - Math.floor(numImages / 2)),
             opacity: index === currentImageIndex ? 1 : 0.6,
             transition: 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out',
             borderRadius: '10px',
+            overflow: 'hidden'
         };
         return style;
     };
@@ -107,13 +110,14 @@ const LandingScreen: React.FC<LandingScreenProps> = ({ onNavigate }) => {
                 Unspoken
             </h1>
             <div
-                className="relative w-full h-[1200px]" //  increased height
+                className="relative w-full mx-auto"
+                style={{ height: '1200px' }}
             >
                 {isLoading ? (
                     Array.from({ length: 8 }).map((_, i) => (
                         <motion.div
                             key={i}
-                            className="absolute bg-gray-700 animate-pulse"
+                            className="absolute bg-gray-700 animate-pulse rounded-lg"
                             style={getGridStyle(i)}
                         >
                             {/* Placeholder while loading */}
@@ -123,13 +127,14 @@ const LandingScreen: React.FC<LandingScreenProps> = ({ onNavigate }) => {
                     images.map((image, i) => (
                         <motion.div
                             key={i}
-                            className="absolute overflow-hidden"
+                            className="absolute"
                             style={getGridStyle(i)}
                         >
                             <img
                                 src={image}
                                 alt={`Carousel ${i + 1}`}
-                                className="w-full h-full object-cover rounded-lg"
+                                className="w-full h-full object-cover"
+                                onError={(e) => (e.currentTarget.style.display = 'none')}
                             />
                         </motion.div>
                     ))

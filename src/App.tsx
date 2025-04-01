@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import DumpScreen from './components/dump';
-import LandingScreen from './components/landing';
-import MakeCollageScreen from './components/collage';
+import DumpScreen from './components/Dump';
+import LandingScreen from './components/Landing';
+import MakeCollageScreen from './components/Collage';
 
 const App = () => {
     const [currentScreen, setCurrentScreen] = useState<'landing' | 'dump' | 'collage'>('landing');

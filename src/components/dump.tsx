@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Upload } from 'lucide-react';
-import { Button } from './ui/button';
+import { Button } from './ui/Button';
 
 interface DumpScreenProps {
   onNavigate: (screen: string) => void;
