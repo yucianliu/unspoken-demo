@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/unspoken-demo/static/css/main.5b954c41.css",
-    "main.js": "/unspoken-demo/static/js/main.de437ebf.js",
+    "main.js": "/unspoken-demo/static/js/main.e2b4cd87.js",
     "index.html": "/unspoken-demo/index.html",
     "main.5b954c41.css.map": "/unspoken-demo/static/css/main.5b954c41.css.map",
-    "main.de437ebf.js.map": "/unspoken-demo/static/js/main.de437ebf.js.map"
+    "main.e2b4cd87.js.map": "/unspoken-demo/static/js/main.e2b4cd87.js.map"
   },
   "entrypoints": [
     "static/css/main.5b954c41.css",
-    "static/js/main.de437ebf.js"
+    "static/js/main.e2b4cd87.js"
   ]
 }
