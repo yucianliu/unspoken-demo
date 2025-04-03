@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Upload } from 'lucide-react';
+import { ArrowLeft, Upload } from 'lucide-react';
 import { Button } from './ui/Button';
 
 interface DumpScreenProps {
@@ -44,10 +44,22 @@ const DumpScreen: React.FC<DumpScreenProps> = ({ onNavigate }) => {
       exit={{ opacity: 0, y: -50 }}
       className="p-4 sm:p-6 space-y-6"
     >
+      <div className="flex items-center justify-between w-full mb-4 flex-shrink-0">
+          <Button
+              variant="ghost"
+              onClick={() => onNavigate('landing')}
+              className="text-gray-500 hover:text-gray-700 flex items-center p-0 hover:bg-transparent"
+          >
+              <ArrowLeft className="w-5 h-5 mr-1 sm:mr-2" />
+              Back
+          </Button>
+          <h2>
+              Throw
+          </h2>
+      </div>
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-200 mb-4">Dump Your Photo</h2>
-        <p className="text-gray-400 mb-8">
-          Upload an image that represents your feelings or memories from the past week
+        <p className="mb-8">
+          Throw away an unwanted image, and let others embrace it.
         </p>
       </div>
 
@@ -92,16 +104,6 @@ const DumpScreen: React.FC<DumpScreenProps> = ({ onNavigate }) => {
             </label>
           )}
         </div>
-      </div>
-
-      <div className="text-center">
-        <Button
-          onClick={() => onNavigate('landing')}
-          className="text-gray-400 hover:text-gray-300"
-          variant="ghost"
-        >
-          Cancel
-        </Button>
       </div>
     </motion.div>
   );

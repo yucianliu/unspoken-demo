@@ -18,33 +18,47 @@ const App = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-lavender-500 text-gray-800">
-            {/* App Header */}
-            <div className="sticky top-0 z-10 bg-white/5 backdrop-blur-md border-b border-white/10 p-4 flex justify-center items-center">
-                <h1 className="text-xl font-bold text-gray-200">Reflect & Release</h1>
+        <div>
+            {/* Sticky Header */}
+            <div className="sticky top-10 z-10 p-4 flex justify-center items-center bg-[#E5DDD740] backdrop-blur-md">
+                <h3>Unspoken</h3>
             </div>
 
             {/* Main Content Area */}
-            <div className="flex-1">
+            <div className="flex-1 w-full px-4 sm:px-8">
                 <AnimatePresence mode='wait'>
                     {currentScreen === 'landing' && (
-                        <LandingScreen
+                        <motion.div
                             key="landing"
-                            onNavigate={handleNavigate}
-                        />
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <LandingScreen onNavigate={handleNavigate} />
+                        </motion.div>
                     )}
                     {currentScreen === 'dump' && (
-                        <DumpScreen
+                        <motion.div
                             key="dump"
-                            onNavigate={handleNavigate}
-                        />
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <DumpScreen onNavigate={handleNavigate} />
+                        </motion.div>
                     )}
                     {currentScreen === 'collage' && (
-                        <MakeCollageScreen
+                        <motion.div
                             key="collage"
-                            onNavigate={handleNavigate}
-                            onPost={handlePost}
-                        />
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <MakeCollageScreen onNavigate={handleNavigate} onPost={handlePost} />
+                        </motion.div>
                     )}
                 </AnimatePresence>
             </div>
