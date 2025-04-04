@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/unspoken-demo/static/css/main.c4dfbd8a.css",
-    "main.js": "/unspoken-demo/static/js/main.512a7480.js",
+    "main.css": "/unspoken-demo/static/css/main.ee8ebf68.css",
+    "main.js": "/unspoken-demo/static/js/main.bb8961bf.js",
     "static/media/img2.jpg": "/unspoken-demo/static/media/img2.b55c9b825a4a3cb1adea.jpg",
     "static/media/img4.jpg": "/unspoken-demo/static/media/img4.3540bb22ed3aa64078dc.jpg",
     "static/media/img5.jpg": "/unspoken-demo/static/media/img5.087efb22c2d86933b965.jpg",
@@ -13,11 +13,11 @@
     "static/media/img7.jpg": "/unspoken-demo/static/media/img7.da529050d20079e22d65.jpg",
     "static/media/img1.jpg": "/unspoken-demo/static/media/img1.73679ae282a355039041.jpg",
     "index.html": "/unspoken-demo/index.html",
-    "main.c4dfbd8a.css.map": "/unspoken-demo/static/css/main.c4dfbd8a.css.map",
-    "main.512a7480.js.map": "/unspoken-demo/static/js/main.512a7480.js.map"
+    "main.ee8ebf68.css.map": "/unspoken-demo/static/css/main.ee8ebf68.css.map",
+    "main.bb8961bf.js.map": "/unspoken-demo/static/js/main.bb8961bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4dfbd8a.css",
-    "static/js/main.512a7480.js"
+    "static/css/main.ee8ebf68.css",
+    "static/js/main.bb8961bf.js"
   ]
 }
