@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/unspoken-demo/static/css/main.ee8ebf68.css",
-    "main.js": "/unspoken-demo/static/js/main.bb8961bf.js",
-    "static/media/img2.jpg": "/unspoken-demo/static/media/img2.b55c9b825a4a3cb1adea.jpg",
-    "static/media/img4.jpg": "/unspoken-demo/static/media/img4.3540bb22ed3aa64078dc.jpg",
-    "static/media/img5.jpg": "/unspoken-demo/static/media/img5.087efb22c2d86933b965.jpg",
-    "static/media/img8.jpg": "/unspoken-demo/static/media/img8.7490a2df66f83b27b089.jpg",
-    "static/media/img10.jpg": "/unspoken-demo/static/media/img10.9da33099d1603e1ceb61.jpg",
-    "static/media/img3.jpg": "/unspoken-demo/static/media/img3.16c2f6ee719e9553c6dd.jpg",
-    "static/media/img6.jpg": "/unspoken-demo/static/media/img6.04be4897dfd4564be77c.jpg",
-    "static/media/img9.jpg": "/unspoken-demo/static/media/img9.db47aa6008f987b2f368.jpg",
-    "static/media/img7.jpg": "/unspoken-demo/static/media/img7.da529050d20079e22d65.jpg",
-    "static/media/img1.jpg": "/unspoken-demo/static/media/img1.73679ae282a355039041.jpg",
+    "main.css": "/unspoken-demo/static/css/main.8ec01029.css",
+    "main.js": "/unspoken-demo/static/js/main.e70d9268.js",
+    "static/media/img6.webp": "/unspoken-demo/static/media/img6.c7f6309fd7d4ef296247.webp",
+    "static/media/img8.webp": "/unspoken-demo/static/media/img8.492549a78c7556b25949.webp",
+    "static/media/img9.webp": "/unspoken-demo/static/media/img9.89cfacb41f689b646a16.webp",
+    "static/media/img2.webp": "/unspoken-demo/static/media/img2.bdc313ef7ecc68f702a6.webp",
+    "static/media/img7.webp": "/unspoken-demo/static/media/img7.e52ec2ef06a1a1ff3211.webp",
+    "static/media/img4.webp": "/unspoken-demo/static/media/img4.1d2df5ddf0b0d97ebf6f.webp",
+    "static/media/img10.webp": "/unspoken-demo/static/media/img10.363de8b4a278456be12e.webp",
+    "static/media/img5.webp": "/unspoken-demo/static/media/img5.c5ded2d0bae75ef745b8.webp",
+    "static/media/img1.webp": "/unspoken-demo/static/media/img1.92153053989387a5cdb5.webp",
+    "static/media/img3.webp": "/unspoken-demo/static/media/img3.308d91d27afa174e78eb.webp",
     "index.html": "/unspoken-demo/index.html",
-    "main.ee8ebf68.css.map": "/unspoken-demo/static/css/main.ee8ebf68.css.map",
-    "main.bb8961bf.js.map": "/unspoken-demo/static/js/main.bb8961bf.js.map"
+    "main.8ec01029.css.map": "/unspoken-demo/static/css/main.8ec01029.css.map",
+    "main.e70d9268.js.map": "/unspoken-demo/static/js/main.e70d9268.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee8ebf68.css",
-    "static/js/main.bb8961bf.js"
+    "static/css/main.8ec01029.css",
+    "static/js/main.e70d9268.js"
   ]
 }
